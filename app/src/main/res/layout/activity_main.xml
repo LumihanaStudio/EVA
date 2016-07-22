@@ -4,70 +4,187 @@
     android:background="@color/backgroundColor"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <!-- Header -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize" />
+        android:layout_height="wrap_content"
+        android:background="@color/actionbarColor"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/actionbarColor"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
 
         <RelativeLayout
-            android:layout_width="240dp"
-            android:layout_height="130dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/round_square"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
             android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/main_card_bankname"
+                    android:id="@+id/header_position_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="KB국민은행"
-                    android:textColor="@color/mainColor"
-                    android:textSize="15sp" />
+                    android:text="용산구 원효로97길 33-4"
+                    android:textColor="#FFF"
+                    android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/main_card_cardnum"
+                    android:id="@+id/header_position_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="772002-04-219697"
-                    android:textColor="@color/textSubColor"
-                    android:textSize="11sp" />
+                    android:text="서울특별시 대한민국"
+                    android:textColor="@color/textSubColor" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="원하는 금액을 입력해 주세요"
+                android:textColor="#FFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="통화 받을 금액을 입력하면 바로 주변의 EVA가 가능한 사람을 바로 탐색합니다"
+                android:textColor="@color/textSubColor"
+                android:textSize="9sp" />
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary"></LinearLayout>
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_square_7dp_gray"
+                android:paddingBottom="5dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="5dp"
+                android:text="대한민국 원 : KRW"
+                android:textColor="@color/textSubColor" />
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_square_7dp_dark"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="받을 금액 입력"
+                    android:textColor="@color/textSubColor" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/main_card_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000"
+                        android:textColor="#FFF"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/main_card_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="KRW"
+                        android:textColor="#FFF"
+                        android:textSize="18sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:orientation="vertical">
+                android:background="@drawable/round_square_7dp_yellow"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/main_card_bankname"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="KB국민은행"
-                    android:textColor="@color/mainColor"
-                    android:textSize="15sp" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/main_card_cardnum"
+                    <TextView
+                        android:id="@+id/main_card_bankname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KB국민은행"
+                        android:textColor="@color/mainColor"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/main_card_cardnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="772002-04-219697"
+                        android:textColor="@color/textSubColor"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="772002-04-219697"
-                    android:textColor="@color/textSubColor"
-                    android:textSize="11sp" />
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="내 잔액"
+                        android:textColor="@color/textSubColor"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/main_card_mymoneyleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="375,000"
+                        android:textColor="@color/mainColor"
+                        android:textSize="23sp" />
+                </LinearLayout>
             </LinearLayout>
-
-
-        </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>
