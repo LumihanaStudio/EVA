@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_square"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_card_bankname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KB국민은행"
+                    android:textColor="@color/mainColor"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/main_card_cardnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="772002-04-219697"
+                    android:textColor="@color/textSubColor"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_card_bankname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KB국민은행"
+                    android:textColor="@color/mainColor"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/main_card_cardnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="772002-04-219697"
+                    android:textColor="@color/textSubColor"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
