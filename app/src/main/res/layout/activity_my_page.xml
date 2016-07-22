@@ -12,14 +12,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="16dp">
+            android:orientation="horizontal">
 
             <kr.edcan.eva.RoundImageView
                 android:layout_width="120dp"
@@ -37,18 +37,99 @@
                     android:layout_height="wrap_content"
                     android:text="구창림"
                     android:textColor="#FFF"
-                    android:textSize="25sp" />
+                    android:textSize="33sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="shiori@itsuka.me"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp" />
+                    android:textSize="17sp" />
             </LinearLayout>
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/ic_myp_star"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="4.5"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화폐 종류"
+                android:textColor="#FFF"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전환할 때 받을 화폐의 종류를 설정합니다."
+                android:textColor="@color/textSubTransparentColor"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="KRW"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전화번호"
+                android:textColor="#FFF"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전환 요청시 빠른 연락을 위해 등록합니다"
+                android:textColor="@color/textSubTransparentColor"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="수정"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
     </RelativeLayout>
 </LinearLayout>
