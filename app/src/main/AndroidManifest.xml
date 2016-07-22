@@ -20,7 +20,8 @@
         <activity android:name=".WorkingActivity" />
         <activity android:name=".CompleteActivity" />
         <activity android:name=".FindingActivity" />
-        <activity android:name=".ConvertActivity"></activity>
+        <activity android:name=".ConvertActivity" />
+        <activity android:name=".AuthActivity"></activity>
     </application>
 
 </manifest>
