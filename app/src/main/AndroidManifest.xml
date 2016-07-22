@@ -15,7 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RequestActivity"></activity>
+        <activity android:name=".RequestActivity" />
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".WorkingActivity" />
+        <activity android:name=".CompleteActivity" />
+        <activity android:name=".FindingActivity" />
+        <activity android:name=".ConvertActivity"></activity>
     </application>
 
 </manifest>
