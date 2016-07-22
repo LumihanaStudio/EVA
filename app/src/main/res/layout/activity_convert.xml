@@ -1,10 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_convert"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.edcan.eva.ConvertActivity">
+    android:background="@color/actionbarColor"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/actionbarColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <kr.edcan.eva.RoundImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp" />
+
+            <TextView
+                android:id="@+id/convert_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="오준석"
+                android:textColor="#FFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="전환 거래가 신청되었습니다.\n곧 신청했던 EVA가 지정한 장소에 도착할 것입니디\n24시간 이내에 전환이 완료되지 않으면 자동으로 거래가 파기됩니다"
+                android:textColor="@color/textSubTransparentColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/convert_footer"
+            android:layout_margin="16dp"
+            android:background="@drawable/round_square_7dp_white"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총 결제될 금액"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/convert_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2,200 Credit"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/convert_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/convert_complete"
+
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_square_20dp_white"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="전환 완료"
+                android:textColor="#FFF" />
+
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/convert_call"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_square_20dp_white"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="전화 걸기"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -6,11 +6,15 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,13 +34,12 @@ public class MainActivity extends AppCompatActivity {
     ListView drawerListView;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
-    ActionBarDrawerToggle toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(getApplicationContext(), MyPageActivity.class));
+        startActivity(new Intent(getApplicationContext(), ConvertActivity.class));
         setAppbarLayout();
         setDefault();
     }
@@ -59,9 +62,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
+                    case 0:
+                        startActivity(new Intent(getApplicationContext(), ChargeActivity.class));
+                        break;
                     case 1:
                         Switch s = (Switch) view.findViewById(R.id.drawer_listview_switch);
                         s.setChecked(!s.isChecked());
+                        break;
+                    case 2:
+                        startActivity(new Intent(getApplicationContext(), HistoryActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(getApplicationContext(), MyPageActivity.class));
+                        break;
+                    case 4:
+                        Uri uri = Uri.parse("mailto:kotohana5706@edcan.kr");
+                        Intent it = new Intent(Intent.ACTION_SENDTO, uri);
+                        startActivity(it);
+                        break;
                 }
             }
         });
@@ -71,32 +89,29 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawerlayout);
         setSupportActionBar(toolbar);
-        toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.app_name, R.string.app_name);
-        drawerLayout.setDrawerListener(toggle);
         toolbar.setTitleTextColor(Color.WHITE);
         getSupportActionBar().setTitle("EVA");
         getSupportActionBar().setElevation(5);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.btn_nav_navdrawer));
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
-// Sync the toggle state after onRestoreInstanceState has occurred.
-        toggle.syncState();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        toggle.onConfigurationChanged(newConfig);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true;
+        switch (item.getItemId()){
+            case 16908332:
+                drawerLayout.openDrawer(GravityCompat.START);
         }
 
         return super.onOptionsItemSelected(item);

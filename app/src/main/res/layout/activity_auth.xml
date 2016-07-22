@@ -1,10 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_auth"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.edcan.eva.AuthActivity">
+    android:background="@color/actionbarColor">
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/title_login_logo" />
+
+    <TextView
+        android:id="@+id/auth_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/auth_footer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="이미 아이디가 있으시면 로그인해주세요."
+        android:textColor="#FFF" />
+
+    <LinearLayout
+        android:id="@+id/auth_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/auth_facebook"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_square_20dp_facebook"
+            android:drawablePadding="0dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="Facebook"
+            android:textColor="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/auth_email"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_square_20dp_white"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="Email"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+</RelativeLayout>
