@@ -6,4 +6,5 @@
     <color name="mainColor">#ffab00</color>
     <color name="backgroundColor">#21222c</color>
     <color name="textSubColor">#616161</color>
+    <color name="textSubTransparentColor">#44FFFFFF</color>
 </resources>
